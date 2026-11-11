@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       targets:
-        description: "Select target platforms (comma separated, e.g. X86,R2S,R2C,R3S,R4S,R5C ;leave blank for all)"
+        description: "Select target platforms (comma separated, e.g. X86,R2S,R2C,R3S,R4S,R5C,R66S ;leave blank for all)"
         required: false
         type: string
         default: ""
@@ -80,7 +80,8 @@ jobs:
             {"name": "R2C", "target": "rockchip", "subtarget": "armv8", "profile": "friendlyarm_nanopi-r2c", "packages_profile": "packages.rockchip"},
             {"name": "R3S", "target": "rockchip", "subtarget": "armv8", "profile": "friendlyarm_nanopi-r3s", "packages_profile": "packages.rockchip"},
             {"name": "R4S", "target": "rockchip", "subtarget": "armv8", "profile": "friendlyarm_nanopi-r4s", "packages_profile": "packages.rockchip"},
-            {"name": "R5C", "target": "rockchip", "subtarget": "armv8", "profile": "friendlyarm_nanopi-r5c", "packages_profile": "packages.rockchip"}
+            {"name": "R5C", "target": "rockchip", "subtarget": "armv8", "profile": "friendlyarm_nanopi-r5c", "packages_profile": "packages.rockchip"},
+            {"name": "R66S", "target": "rockchip", "subtarget": "armv8", "profile": "lunzn_fastrhino-r66s", "packages_profile": "packages.rockchip"}
           ]'
 
           inputs_targets="${{ inputs.targets }}"
